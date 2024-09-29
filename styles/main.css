@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .noto-sans {
+        font-family: "Noto Sans Mono", monospace;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+}
