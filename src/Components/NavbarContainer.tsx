@@ -5,7 +5,7 @@ import {
 } from "@heroicons/react/24/outline";
 import NavItem from "./NavItem";
 import {useLocation, useNavigate} from "react-router-dom";
-import {classNames} from "../Globals/GlobalVariables";
+import {classNames, root_url} from "../Globals/GlobalVariables";
 import React from "react";
 
 export default function NavbarContainer({element}: {element: JSX.Element}){
@@ -17,21 +17,21 @@ export default function NavbarContainer({element}: {element: JSX.Element}){
     const navigation = [
         {
             title: "Home",
-            href: "/",
+            href: root_url,
             icon: <HomeIcon className={icon_style}/>,
             active: "/" == location.pathname,
             target: "_self"
         },
         {
             title: "Bool",
-            href: "/bool-cmd",
+            href: root_url+"/bool-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
             active: "/bool-cmd" == location.pathname,
             target: "_self"
         },
         {
             title: "Toggle",
-            href: "/toggle-cmd",
+            href: root_url+"/toggle-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
             active: "/toggle-cmd" == location.pathname,
             target: "_self"

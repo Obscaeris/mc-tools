@@ -2,7 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, HomeIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavItem from "./NavItem";
 import { useLocation, useNavigate } from "react-router-dom";
-import { classNames } from "../Globals/GlobalVariables";
+import { classNames, root_url } from "../Globals/GlobalVariables";
 import React from "react";
 export default function NavbarContainer({ element }) {
     const nav_icon_style = "block h-12 w-12 stroke-primary hover:stroke-accent";
@@ -11,21 +11,21 @@ export default function NavbarContainer({ element }) {
     const navigation = [
         {
             title: "Home",
-            href: "/",
+            href: root_url,
             icon: React.createElement(HomeIcon, { className: icon_style }),
             active: "/" == location.pathname,
             target: "_self"
         },
         {
             title: "Bool",
-            href: "/bool-cmd",
+            href: root_url + "/bool-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
             active: "/bool-cmd" == location.pathname,
             target: "_self"
         },
         {
             title: "Toggle",
-            href: "/toggle-cmd",
+            href: root_url + "/toggle-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
             active: "/toggle-cmd" == location.pathname,
             target: "_self"
