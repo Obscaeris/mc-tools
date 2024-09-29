@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import {classNames} from "../Globals/GlobalVariables";
+import {classNames, root_url} from "../Globals/GlobalVariables";
 import React from "react";
 
 interface ButtonProps {
@@ -17,7 +17,7 @@ export default function Button( {text, href, onClick, active, border=true}: Butt
     const hover_style = active ? "shadow shadow-primary hover:shadow-none": "hover:shadow hover:shadow-primary";
     const border_style = border ? "border-primary border-2": "hover:border-primary hover:border-2";
     return (
-        <div className={classNames("flex py-1 px-2 bg-background rounded mx-2","cursor-pointer select-none",text_style,hover_style,border_style)} onClick={()=>href ? nav(href) : onClick}>
+        <div className={classNames("flex py-1 px-2 bg-background rounded mx-2","cursor-pointer select-none",text_style,hover_style,border_style)} onClick={()=>href ? nav(root_url+"/"+href, ) : onClick}>
             <p>{text}</p>
         </div>
     );

@@ -1,4 +1,4 @@
 export function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
 }
-export const languages = ["en", "fr"];
+export const root_url = "/mc-tools";

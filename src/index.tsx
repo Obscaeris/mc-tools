@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import {
-    createHashRouter,
+    createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
 import { ErrorPage } from "./Components/ErrorPage";
@@ -11,20 +11,21 @@ import NavbarContainer from "./Components/NavbarContainer";
 import Root from "./routes/Root";
 import Bool from "./routes/bool";
 import Toggle from "./routes/toggle";
+import {root_url} from "./Globals/GlobalVariables";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
     {
-        path: "/",
+        path: root_url,
         element: <NavbarContainer element={<Root />} />,
         errorElement: <ErrorPage />
     },
     {
-        path: "/bool-cmd",
+        path: root_url + "/bool-cmd",
         element: <NavbarContainer element={<Bool />} />,
         errorElement: <ErrorPage />
     },
     {
-        path: "/toggle-cmd",
+        path: root_url + "/toggle-cmd",
         element: <NavbarContainer element={<Toggle />} />,
         errorElement: <ErrorPage />
     }
