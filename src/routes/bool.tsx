@@ -32,8 +32,6 @@ export default function Bool(){
         const condition = searchParams.get("condition") as string;
         output_text = generateBooleanCommand(score, condition).join("\n");
 
-    }else {
-        console.log("No search params");
     }
 
     return (

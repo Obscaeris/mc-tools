@@ -32,9 +32,6 @@ export default function Toggle(){
         const activationCondition = searchParams.get("activation_condition") as string;
         const condition = searchParams.get("condition") as string;
         output_text = generateToggleableCommand(score, activationCondition,condition).join("\n");
-
-    }else {
-        console.log("No search params");
     }
 
     return (
