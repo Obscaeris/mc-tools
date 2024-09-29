@@ -8,26 +8,27 @@ export default function NavbarContainer({ element }) {
     const nav_icon_style = "block h-12 w-12 stroke-primary hover:stroke-accent";
     const location = useLocation();
     const icon_style = "w-6 h-6";
+    console.log("PATH NAME:", location.pathname);
     const navigation = [
         {
             title: "Home",
-            href: root_url,
+            href: "/",
             icon: React.createElement(HomeIcon, { className: icon_style }),
             active: "/" == location.pathname,
             target: "_self"
         },
         {
             title: "Bool",
-            href: root_url + "/bool-cmd",
+            href: "/bool-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
-            active: "/bool-cmd" == location.pathname,
+            active: root_url + "/bool-cmd" == location.pathname,
             target: "_self"
         },
         {
             title: "Toggle",
-            href: root_url + "/toggle-cmd",
+            href: "/toggle-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
-            active: "/toggle-cmd" == location.pathname,
+            active: root_url + "/toggle-cmd" == location.pathname,
             target: "_self"
         },
     ];

@@ -13,27 +13,26 @@ export default function NavbarContainer({element}: {element: JSX.Element}){
     const location = useLocation();
 
     const icon_style = "w-6 h-6";
-
     const navigation = [
         {
             title: "Home",
-            href: root_url,
+            href: "/",
             icon: <HomeIcon className={icon_style}/>,
             active: "/" == location.pathname,
             target: "_self"
         },
         {
             title: "Bool",
-            href: root_url+"/bool-cmd",
+            href: "/bool-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
-            active: "/bool-cmd" == location.pathname,
+            active: root_url+"/bool-cmd" == location.pathname,
             target: "_self"
         },
         {
             title: "Toggle",
-            href: root_url+"/toggle-cmd",
+            href: "/toggle-cmd",
             //icon: <NewspaperIcon className={icon_style}/>,
-            active: "/toggle-cmd" == location.pathname,
+            active: root_url+"/toggle-cmd" == location.pathname,
             target: "_self"
         },
 
@@ -61,7 +60,7 @@ export default function NavbarContainer({element}: {element: JSX.Element}){
                                     className="h-12 w-12 rounded-full border-2 border-white cursor-pointer hover:opacity-80"
                                     src="./media/site_icon.jpg"
                                     alt="Site Icon"
-                                    onClick={() => {nav("/");}}
+                                    onClick={() => {nav(root_url);}}
 
                                 />
                             </div>
