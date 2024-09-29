@@ -27,9 +27,6 @@ export default function Toggle() {
         const condition = searchParams.get("condition");
         output_text = generateToggleableCommand(score, activationCondition, condition).join("\n");
     }
-    else {
-        console.log("No search params");
-    }
     return (React.createElement("div", { className: "flex flex-col w-full bg-background" },
         React.createElement("div", { id: "content", className: "grow items-center flex flex-col bg-background" },
             React.createElement("div", { className: "flex my-4 items-center flex-col text-center" },
