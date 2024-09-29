@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import {
-    createBrowserRouter,
+    createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 import ErrorPage from "./Components/ErrorPage.tsx";
@@ -12,7 +12,7 @@ import Root from "./routes/Root.tsx";
 import Bool from "./routes/bool.tsx";
 import Toggle from "./routes/toggle.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <NavbarContainer element={<Root />} />,
