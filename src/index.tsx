@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import {
-    createBrowserRouter,
+    createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 import { ErrorPage } from "./Components/ErrorPage";
@@ -12,7 +12,7 @@ import Root from "./routes/Root";
 import Bool from "./routes/bool";
 import Toggle from "./routes/toggle";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <NavbarContainer element={<Root />} />,
@@ -36,7 +36,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <link rel="stylesheet" href="/styles/tailwind.css"/>
+        <link rel="stylesheet" href="./styles/tailwind.css"/>
         <RouterProvider router={router}/>
     </React.StrictMode>
 );

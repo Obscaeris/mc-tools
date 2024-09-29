@@ -59,7 +59,7 @@ export default function NavbarContainer({element}: {element: JSX.Element}){
                                 { /* Site Icon */}
                                 <img
                                     className="h-12 w-12 rounded-full border-2 border-white cursor-pointer hover:opacity-80"
-                                    src="/media/site_icon.jpg"
+                                    src="./media/site_icon.jpg"
                                     alt="Site Icon"
                                     onClick={() => {nav("/");}}
 

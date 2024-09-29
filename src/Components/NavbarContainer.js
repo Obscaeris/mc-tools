@@ -39,7 +39,7 @@ export default function NavbarContainer({ element }) {
                     React.createElement("span", { className: "sr-only" }, "Open sidebar"),
                     open ? (React.createElement(XMarkIcon, { className: nav_icon_style, "aria-hidden": "true" })) : (React.createElement(Bars3Icon, { className: nav_icon_style, "aria-hidden": "true" }))),
                 React.createElement("div", { className: classNames("flex items-center") },
-                    React.createElement("img", { className: "h-12 w-12 rounded-full border-2 border-white cursor-pointer hover:opacity-80", src: "/media/site_icon.jpg", alt: "Site Icon", onClick: () => { nav("/"); } })),
+                    React.createElement("img", { className: "h-12 w-12 rounded-full border-2 border-white cursor-pointer hover:opacity-80", src: "./media/site_icon.jpg", alt: "Site Icon", onClick: () => { nav("/"); } })),
                 React.createElement("div", { className: "w-4" }),
                 React.createElement("nav", { className: "hidden md:flex" }, navigation.map((item) => (React.createElement(NavItem, { key: "NavItem-" + item.title, title: item.title, href: item.href, active: item.active, icon: item.icon, target: item.target }))))),
             React.createElement("div", { className: "flex w-full min-h-full h-fit" },

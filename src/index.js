@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import { createHashRouter, RouterProvider, } from "react-router-dom";
 import { ErrorPage } from "./Components/ErrorPage";
 import NavbarContainer from "./Components/NavbarContainer";
 import Root from "./routes/Root";
 import Bool from "./routes/bool";
 import Toggle from "./routes/toggle";
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: React.createElement(NavbarContainer, { element: React.createElement(Root, null) }),
@@ -25,5 +25,5 @@ const router = createBrowserRouter([
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(React.createElement(React.StrictMode, null,
-    React.createElement("link", { rel: "stylesheet", href: "/styles/tailwind.css" }),
+    React.createElement("link", { rel: "stylesheet", href: "./styles/tailwind.css" }),
     React.createElement(RouterProvider, { router: router })));
