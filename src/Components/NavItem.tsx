@@ -1,4 +1,5 @@
-import {classNames} from "../Globals/GlobalVariables.ts";
+import React from "react";
+import {classNames} from "../Globals/GlobalVariables";
 import {useNavigate} from "react-router-dom";
 
 interface NavItemProps {

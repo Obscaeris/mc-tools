@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -5,12 +6,11 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import ErrorPage from "./Components/ErrorPage.tsx";
-import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
-import NavbarContainer from "./Components/NavbarContainer.tsx";
-import Root from "./routes/Root.tsx";
-import Bool from "./routes/bool.tsx";
-import Toggle from "./routes/toggle.tsx";
+import { ErrorPage } from "./Components/ErrorPage";
+import NavbarContainer from "./Components/NavbarContainer";
+import Root from "./routes/Root";
+import Bool from "./routes/bool";
+import Toggle from "./routes/toggle";
 
 const router = createBrowserRouter([
     {
@@ -30,15 +30,13 @@ const router = createBrowserRouter([
     }
 ]);
 
-console.log(router.basename);
-
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
+
 root.render(
     <React.StrictMode>
         <link rel="stylesheet" href="/styles/tailwind.css"/>
-        <ScrollToHashElement/>
         <RouterProvider router={router}/>
     </React.StrictMode>
 );

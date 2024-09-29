@@ -1,5 +1,6 @@
 import {useNavigate} from "react-router-dom";
-import {classNames} from "../Globals/GlobalVariables.ts";
+import {classNames} from "../Globals/GlobalVariables";
+import React from "react";
 
 interface ButtonProps {
     text: string;

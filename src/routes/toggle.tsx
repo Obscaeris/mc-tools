@@ -1,9 +1,11 @@
-import Footer from "../Components/Footer.tsx";
-import TextBlock from "../Components/TextBlock.tsx";
-import FormField from "../Classes/FormField.ts";
-import Form from "../Components/Form.tsx";
+
+import React from "react";
+import Footer from "../Components/Footer";
+import TextBlock from "../Components/TextBlock";
+import FormField from "../Classes/FormField";
+import Form from "../Components/Form";
 import {useSearchParams} from "react-router-dom";
-import {generateToggleableCommand} from "../Globals/Utilities.ts";
+import {generateToggleableCommand} from "../Globals/Utilities";
 
 export default function Toggle(){
     const intro_txt = "A toggleable cmd, uses a score as a flag to enable a command, which can then be turned on/off base on another condition.\nYou can specify the score's name and the condition to toggle the command.";

@@ -1,7 +1,8 @@
 import {useNavigate, useRouteError} from "react-router-dom";
-import {classNames} from "../Globals/GlobalVariables.ts";
+import {classNames} from "../Globals/GlobalVariables";
+import React from "react";
 
-export default function ErrorPage() {
+export function ErrorPage() {
 
     interface ErrorType{
         status: number,

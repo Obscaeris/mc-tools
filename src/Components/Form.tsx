@@ -1,4 +1,5 @@
-import FormField from "../Classes/FormField.ts";
+import React from "react";
+import FormField from "../Classes/FormField";
 
 interface FormProps {
     title?: string;

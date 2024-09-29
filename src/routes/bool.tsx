@@ -1,9 +1,10 @@
-import Footer from "../Components/Footer.tsx";
-import TextBlock from "../Components/TextBlock.tsx";
-import FormField from "../Classes/FormField.ts";
-import Form from "../Components/Form.tsx";
+import Footer from "../Components/Footer";
+import TextBlock from "../Components/TextBlock";
+import FormField from "../Classes/FormField";
+import Form from "../Components/Form";
 import {useSearchParams} from "react-router-dom";
-import {generateBooleanCommand} from "../Globals/Utilities.ts";
+import {generateBooleanCommand} from "../Globals/Utilities";
+import React from "react";
 
 
 

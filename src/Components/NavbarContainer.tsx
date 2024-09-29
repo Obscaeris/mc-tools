@@ -3,9 +3,10 @@ import {
     Bars3Icon, HomeIcon,
     XMarkIcon
 } from "@heroicons/react/24/outline";
-import NavItem from "./NavItem.tsx";
+import NavItem from "./NavItem";
 import {useLocation, useNavigate} from "react-router-dom";
-import {classNames} from "../Globals/GlobalVariables.ts";
+import {classNames} from "../Globals/GlobalVariables";
+import React from "react";
 
 export default function NavbarContainer({element}: {element: JSX.Element}){
     const nav_icon_style = "block h-12 w-12 stroke-primary hover:stroke-accent";
